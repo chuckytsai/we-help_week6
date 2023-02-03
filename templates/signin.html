@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="http://127.0.0.1:3000/Alice/css/template.css"> -->
+    <script src="http://127.0.0.1:3000/Alice/js/template.js"></script>
+    <link rel="stylesheet" href="http://127.0.0.1:3000/Alice/css/template.css">
+    <title>Assignment - Week 4</title>
+</head>
+
+
+<body>
+    <label id="verify">Welcome to Wonderland</label>
+
+    <h2 class="verifyInput">but, Who are you ? </h2>
+    <!-- 登入的form -->
+    <form id="IdPw" action="/signin" method="POST">
+        <div>
+            <h5 class="verifyInput">ID</h5>
+            <a class="verifyInput" href="javascript:playPause();"><input class="verifyInput" type="text" name="whatName" /></a>
+            <h5 class="verifyInput">Tell me your secret</h5>
+            <a class="verifyInput" href="javascript:playPause();"><input class="verifyInput" type="password" name="whatPW" /></a>
+            <br>
+            <button class="verifyInput" id="login">登 入</button>
+        </div>
+    </form>
+    <hr>
+    <h2 class="verifyInput">or join us </h2>
+    <!-- 註冊的form -->
+    <form id="registered" action="/registered" method="POST">
+        <div>
+            <h5 class="verifyInput">Name</h5>
+            <a class="verifyInput" href="javascript:playPause();"><input class="verifyInput" type="text" name="whatName" /></a>
+            <h5 class="verifyInput">ID</h5>
+            <a class="verifyInput" href="javascript:playPause();"><input class="verifyInput" type="text" name="whatName" /></a>
+            <h5 class="verifyInput">What's your secret</h5>
+            <a class="verifyInput" href="javascript:playPause();"><input class="verifyInput" type="password" name="whatPW" /></a>
+            <br>
+            <button class="verifyInput" id="login">註 冊</button>
+        </div>
+
+    </form>
+
+    <audio id="music2" src="http://127.0.0.1:3000/Alice/media/titik.mp3" loop="3"></audio>
+</body>
+
+
+
+</html>

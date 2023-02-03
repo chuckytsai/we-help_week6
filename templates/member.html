@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://127.0.0.1:3000/spider/css/template.css">
+    <title>{{Myname }} signing in</title>
+    <link rel="icon" href="http://127.0.0.1:3000/spider/img/spiderman.icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        background-image: url("http://127.0.0.1:3000/spider/img/spidermanCity.jpg");
+    }
+</style>
+
+<body>
+
+    <div>
+        <a href="/logout" class="verifyInput">Sign out</a>
+    </div>
+
+    <label id="verify">Welcome {{Myname}} ,I am Your friendly neighborhood</label>
+
+    <!-- 變更密碼的form -->
+    <div class="fromBlock">
+        <h2 class="verifyTitle">Do you want change password ?</h2>
+        <form id="registered" action="/changpw" method="POST">
+            <div>
+                <h5 class="verifyInput">Name</h5>
+                <a class="verifyInput"><input class="verifyInput" type="text" name="checkName" /></a>
+                <h5 class="verifyInput">old password</h5>
+                <a class="verifyInput"><input class="verifyInput" type="text" name="checkPW" /></a>
+                <h5 class="verifyInput">new password</h5>
+                <a class="verifyInput"><input class="verifyInput" type="test" name="checkAgain" /></a>
+                <br>
+                <button class="verifyInput justButton">變 更</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

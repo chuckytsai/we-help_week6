@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="http://127.0.0.1:3000/spider/css/template.css"> -->
+    <link rel="stylesheet" href="http://127.0.0.1:3000/spider/css/template.css">
+    <title>Assignment - Week 6</title>
+    <link rel="icon" href="http://127.0.0.1:3000/spider/img/spiderman.icon.png" type="image/x-icon">
+</head>
+
+<script>
+    javascript: playPause()
+</script>
+
+<body>
+
+    <label id="verify">Welcome to my web !</label>
+
+    <!-- 註冊的form -->
+    <div class="fromBlock">
+        <h2 class="verifyTitle">Do you want join us ?</h2>
+        <form id="registered" action="/signup" method="POST">
+            <div>
+                <h5 class="verifyInput">Name</h5>
+                <a class="verifyInput"><input class="verifyInput" type="text" name="wantName" /></a>
+                <h5 class="verifyInput">ID</h5>
+                <a class="verifyInput"><input class="verifyInput" type="text" name="wantID" /></a>
+                <h5 class="verifyInput">Password</h5>
+                <a class="verifyInput"><input class="verifyInput" type="password" name="wantPW" /></a>
+                <br>
+                <button class="verifyInput justButton">註 冊</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 登入的form -->
+    <div class="fromBlock">
+        <h2 class="verifyTitle">Plase check Your ID & password</h2>
+        <form id="IdPw" action="/signin" method="POST">
+            <div>
+                <h5 class="verifyInput">ID</h5>
+                <a class="verifyInput"><input class="verifyInput" type="text" name="whatName" /></a>
+                <h5 class="verifyInput">Input your password</h5>
+                <a class="verifyInput"><input class="verifyInput" type="password" name="whatPW" /></a>
+                <br>
+                <button class="verifyInput justButton">登 入</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0%;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+        width: 1000%;
+        position: relative;
+    }
+    
+    ul li {
+        float: left;
+    }
+    /* img {
+        display: none;
+    } */
+    
+    .box {
+        width: 30%;
+        height: 200px;
+        margin: 50px auto;
+        position: relative;
+    }
+    
+    .btn {
+        position: absolute;
+        left: 0;
+        border: inset 10px rgb(243, 237, 237);
+        width: 480px;
+        height: 260px;
+        z-index: 999;
+    }
+    /* .btnFox {
+        position: absolute;
+        height: 280px;
+        width: 100%;
+        background-color: rgb(236, 39, 39);
+        z-index: 40;
+    } */
+    
+    span {
+        height: 80px;
+        width: 30px;
+        display: inline-block;
+        background-color: #333333;
+        color: cornsilk;
+        opacity: 0.4;
+        font-size: 30px;
+        line-height: 80px;
+        cursor: pointer;
+        /* display: none; */
+    }
+    
+    .btnLeft {
+        position: relative;
+        float: left;
+        right: 8%;
+    }
+    
+    .btnRight {
+        position: relative;
+        float: right;
+        left: 8%;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="../material/img/spider2099.jpg" alt=""></li>
+            <li><img src="../material/img/spidermanCity.jpg" alt=""></li>
+            <li><img src="../material/img/spidermanYA.jpg" alt=""></li>
+            <li><img src="../material/img/spiderSix6.jpg" alt=""></li>
+        </ul>
+
+        <div class="btn">
+            <span class="btnLeft">&lt;</span>
+            <span class="btnRight">&gt;</span>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var box = document.getElementsByClassName("box")[0];
+    var spans = document.getElementsByTagName("span");
+    var ul = box.children[0];
+    var img = document.getElementsByTagName("img");
+    box.onmouseover = function() {
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].style.display = "block"
+            }
+        }
+        // box.onmouseout = function() {
+        //     for (var i = 0; i < spans.length; i++) {
+        //         spans[i].style.display = "none"
+        //     }
+        // }
+
+    // 左邊按鈕
+
+    document.getElementsByClassName("btnLeft")[0].onclick = function() {
+        // for (let index = 0; index < 4; index++) {
+        //     img[index].style.display = "none"
+        // }
+        target += 500;
+    }
+
+    // 右邊按鈕
+    document.getElementsByClassName("btnRight")[0].onclick = function() {
+        // for (let index = 0; index < 4; index++) {
+        //     img[index].style.display = "block"
+        // }
+        target -= 500;
+    }
+
+    var leader = 0;
+    var target = 0;
+    setInterval(function() {
+        if (target < -(500 * 3)) {
+            target = -(500 * 3)
+        } else if (target >= 0) {
+            target = 0;
+        }
+        leader = leader + (target - leader) / 10;
+        ul.style.left = leader + "px";
+    }, 20)
+</script>
+
+</html>
